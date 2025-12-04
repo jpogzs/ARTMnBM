@@ -1,0 +1,140 @@
+/* ===============================
+   PAGE TITLES
+=============================== */
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+.page-title {
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: #04AA6D;
+  margin: 10px 0 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.page-subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+
+/* ===============================
+   TABLE STYLES
+=============================== */
+#myTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 90%;        /* smaller than full page */
+  margin: 30px auto; /* centers + margin */
+}
+
+#myTable th,
+#myTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Hover row effect */
+#myTable tr:hover {
+  background-color: #ddd;
+}
+
+/* Table header */
+#myTable th {
+  padding: 12px 8px;
+  background-color: #04AA6D;
+  color: white;
+  text-align: center !important;
+}
+
+/* Default table cell alignment (center) */
+td, th {
+  text-align: center;
+}
+
+/* ===============================
+   COLUMN ALIGNMENTS
+   Columns LEFT (except header)
+=============================== */
+#myTable td:nth-child(1),
+#myTable td:nth-child(3),
+#myTable td:nth-child(5),
+#myTable td:nth-child(6),
+#myTable td:nth-child(7),
+#myTable td:nth-child(8) {
+  text-align: left !important;
+}
+
+/* ===============================
+   COLUMN ALIGNMENTS
+   Columns RIGHT (except header)
+=============================== */
+#myTable td:nth-child(4),
+#myTable td:nth-child(9),
+#myTable td:nth-child(10) {
+  text-align: right !important;
+}
+
+/* ===============================
+   CENTERED SEARCH BOX
+=============================== */
+.search-wrapper {
+  width: 90%;
+  margin: 20px auto 30px auto; /* space above + centered */
+  display: flex;
+  justify-content: center;
+}
+
+#myInput {
+  width: 300px;       /* nice clean size */
+  max-width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* ===============================
+   SCROLLABLE TABLE WRAPPER
+   =============================== */
+.table-round {
+  width: 90%;
+  margin: 30px auto;
+  max-height: 700px;       /* adjust scroll height as needed */
+  overflow-y: auto;
+  overflow-x: hidden;       /* prevent sideways scroll */
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Make header stick */
+#myTable th {
+  position: sticky;
+  top: 0;
+  z-index: 10;              /* ensure header stays on top */
+}
+
+/* Keep header background when sticky */
+#myTable th {
+  background-color: #04AA6D !important;
+  color: white;
+}
+
+/* Avoid table stretching outside container */
+#myTable {
+  width: 100%;
+  margin: 0;                /* wrapper now handles margins */
+  border-collapse: collapse;
+}
+
+
+

@@ -1,0 +1,51 @@
+<!--  POGI SCRIPTS -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BeingMeasured Reports</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    
+<h1 class="page-title">Assigned RTM and Being Measured Reports</h1>
+<div class="page-subtitle">All Sites</div>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+<div class="search-wrapper">
+    <input class="form-control" id="myInput" type="text" placeholder="Search.." value="">
+</div>
+
+<input type="hidden" id="defaultFilter" value="">
+
+<div class="table-round">
+    <table class="sortable" id="myTable">
+
+            <thead>
+                <tr>
+                    <th> State </th>
+                    <th id="fileCount"> Report </th>
+                    <th> Username </th>
+                    <th> Tech ID </th>
+                    <th> Team </th>
+                    <th> Location </th>
+                    <th> Product </th>
+                    <th> Measurement Item </th>
+                    <th> Elapsed Time (h:m:s) </th>
+                    <th> Due In (h:m:s) </th>
+                </tr>
+            </thead>
+            <tbody id="data">
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
