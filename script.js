@@ -255,7 +255,7 @@ fetchWithRetry('https://worldtimeapi.org/api/timezone/PST8PDT')
                         temp += `</tr>`;
 
                         /* ---- Inject ---- */
-                        document.getElementById('fileCount').innerHTML = `Report (${fileCount})`;
+                        document.getElementById('fileCount').innerHTML = `Reports (${fileCount})`;
                         document.getElementById('data').innerHTML = temp;
                         applyFilter();
 // Auto-sort by the "Due In" column (ascending)
@@ -304,7 +304,7 @@ $("#myInput").on("keyup", function () {
 
   // Update file count after typing
   const visibleCount = $("#data tr:visible").length;
-  document.getElementById("fileCount").innerHTML = `Report (${visibleCount})`;
+  document.getElementById("fileCount").innerHTML = `Reports (${visibleCount})`;
 });
 
 });
@@ -321,7 +321,7 @@ function applyFilter() {
   const visibleCount = $("#data tr:visible").length;
 
   // Update display
-  document.getElementById("fileCount").innerHTML = `Report (${visibleCount})`;
+  document.getElementById("fileCount").innerHTML = `Reports (${visibleCount})`;
 }
 
 
