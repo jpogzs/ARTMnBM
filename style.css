@@ -109,7 +109,7 @@ td, th {
 .table-round {
   width: 90%;
   margin: 30px auto;
-  max-height: 700px;       /* adjust scroll height as needed */
+  max-height: 710px;       /* adjust scroll height as needed */
   overflow-y: auto;
   overflow-x: hidden;       /* prevent sideways scroll */
   border-radius: 8px;

@@ -255,7 +255,7 @@ fetchWithRetry('https://worldtimeapi.org/api/timezone/PST8PDT')
                         temp += `</tr>`;
 
                         /* ---- Inject ---- */
-                        document.getElementById('fileCount').innerHTML = `Report (${fileCount})`;
+                        document.getElementById('fileCount').innerHTML = `Reports (${fileCount})`;
                         document.getElementById('data').innerHTML = temp;
                         applyFilter();
 // Auto-sort by the "Due In" column (ascending)
@@ -304,7 +304,7 @@ $("#myInput").on("keyup", function () {
 
   // Update file count after typing
   const visibleCount = $("#data tr:visible").length;
-  document.getElementById("fileCount").innerHTML = `Report (${visibleCount})`;
+  document.getElementById("fileCount").innerHTML = `Reports (${visibleCount})`;
 });
 
 });
@@ -321,7 +321,7 @@ function applyFilter() {
   const visibleCount = $("#data tr:visible").length;
 
   // Update display
-  document.getElementById("fileCount").innerHTML = `Report (${visibleCount})`;
+  document.getElementById("fileCount").innerHTML = `Reports (${visibleCount})`;
 }
 
 
@@ -374,11 +374,22 @@ setInterval(() => {
 }, 1000);
 
 /* ============================================================================
-   RELOAD EVERY 5 MINUTES
+   PAGE RELOAD TIMER (Visible Countdown + Auto Reload)
    ============================================================================ */
-window.addEventListener('load', () => {
-  setInterval(() => {
+
+let reloadSeconds = 600; // 10 minutes
+
+setInterval(() => {
+  reloadSeconds--;
+
+  const m = String(Math.floor(reloadSeconds / 60)).padStart(2, "0");
+  const s = String(reloadSeconds % 60).padStart(2, "0");
+
+  const t = document.getElementById("reloadTimer");
+  if (t) t.textContent = `Auto Reload in: ${m}:${s}`;
+
+  if (reloadSeconds <= 0) {
     window.location.reload();
-  }, 300000); // 5 minutes
-});
+  }
+}, 1000);
 
